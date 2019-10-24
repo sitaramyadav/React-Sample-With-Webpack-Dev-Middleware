@@ -12,7 +12,7 @@ const app = express(),
 
 app.use(webpackDevMiddleware(compiler, {
   publicPath: config.output.publicPath
-}))
+}));
 
 app.use(webpackHotMiddleware(compiler))
 
@@ -22,14 +22,14 @@ app.get('*', (req, res, next) => {
     return next(err)
   }
   res.set('content-type', 'text/html')
-  res.send(result)
+  res.send(result);
   res.end()
   })
-})
+});
 
-const PORT = process.env.PORT || 8080
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`App listening to ${PORT}....`)
     console.log('Press Ctrl+C to quit.')
-})
+});

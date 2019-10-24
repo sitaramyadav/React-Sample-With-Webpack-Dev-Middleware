@@ -2,11 +2,10 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './components/App'
 
-import './assets/styles/style.css'
 
 ReactDOM.render(
   <App />,
-  document.getElementById('react-container') // eslint-disable-line no-undef
+  document.getElementById('app') // eslint-disable-line no-undef
 )
 
 if(module.hot) // eslint-disable-line no-undef  
