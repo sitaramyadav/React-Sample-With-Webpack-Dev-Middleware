@@ -13,7 +13,10 @@ module.exports = {
   },
   mode: 'development',
   target: 'web',
-  devtool: '#source-map',
+  devtool: 'inline-source-map',
+  devServer: {
+         contentBase: './dist',
+       },
   module: {
     rules: [
       {
